@@ -107,7 +107,7 @@ export default function Home() {
                 </h1>
               </div>
               <p className="text-sm sm:text-lg lg:text-xl text-black font-black uppercase tracking-widest pl-1" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
-                Co-founder @ XYZ Startup — Software Engineer
+                Co-founder @ ExtensorLabs — Software Engineer
               </p>
             </div>
           </div>
