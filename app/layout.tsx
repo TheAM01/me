@@ -7,25 +7,10 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: '--font-space
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'Your Personal Brand',
-  description: 'Discover my work, projects, and creative endeavors',
-  generator: 'v0.app',
+  title: 'Abdul Mueed',
+  description: 'Software Engineer & Co-Founder',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/icon.png',
   },
 }
 
