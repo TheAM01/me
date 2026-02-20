@@ -10,7 +10,7 @@ export default function Home() {
     {
       id: 'etcher',
       title: 'Etcher',
-      description: 'HR Management software',
+      description: 'Simple & efficient HR & project management software for small startups',
       icon: Code2,
       href: 'https://etcher.mueed.xyz',
       color: 'from-slate-900 to-black',
@@ -18,7 +18,7 @@ export default function Home() {
     {
       id: 'classman',
       title: 'Classman',
-      description: 'Personal classes management',
+      description: 'Personal schedule manager for online classes',
       icon: Zap,
       href: 'https://classman.mueed.xyz',
       color: 'from-zinc-900 to-black',
@@ -26,7 +26,7 @@ export default function Home() {
     {
       id: 'parhle',
       title: 'Parhle',
-      description: 'Notes sharing for students',
+      description: 'Notes & resources sharing platform for university students',
       icon: Code2,
       href: 'https://parhle.mueed.xyz',
       color: 'from-gray-900 to-black',
@@ -53,7 +53,7 @@ export default function Home() {
     {
       id: 'discord',
       title: 'Discord',
-      description: 'Join my community',
+      description: 'Join my server',
       icon: Mail,
       href: 'https://mueed.xyz/discord',
       color: 'from-[#5865F2] to-[#7289da]',
@@ -61,7 +61,7 @@ export default function Home() {
     {
       id: 'instagram',
       title: 'Instagram',
-      description: 'Visual storytelling',
+      description: 'Visual ventures',
       icon: Mail,
       href: 'https://mueed.xyz/instagram',
       color: 'from-[#833ab4] via-[#fd1d1d] to-[#fcb045]',
@@ -69,7 +69,7 @@ export default function Home() {
     {
       id: 'spotify',
       title: 'Spotify',
-      description: 'Original music',
+      description: 'Music I produced',
       icon: Music,
       href: 'https://mueed.xyz/spotify',
       color: 'from-[#1DB954] to-[#191414]',
@@ -77,7 +77,7 @@ export default function Home() {
     {
       id: 'contact',
       title: 'Get in Touch',
-      description: 'Let\'s collaborate',
+      description: 'Send me an email',
       icon: Mail,
       href: 'mailto:personal.abdulmueed@gmail.com',
       color: 'from-zinc-800 to-black',
@@ -121,38 +121,39 @@ export default function Home() {
               {products.map((product) => {
                 const Icon = product.icon
                 return (
-                  <a
-                    key={product.id}
-                    href={product.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onMouseEnter={() => setHoveredLink(product.id)}
-                    onMouseLeave={() => setHoveredLink(null)}
-                    className="group relative overflow-hidden rounded-none border-2 border-black bg-white p-4 sm:p-6 lg:p-7 transition-all duration-150 hover:scale-95 hover:bg-black hover:text-white cursor-pointer active:scale-85 hover:-skew-x-2 hover:skew-y-1"
-                    style={{
-                      transform: hoveredLink === product.id ? 'perspective(1000px) rotateX(2deg) rotateZ(-1deg)' : 'none',
-                    }}
-                  >
-                    {/* Aggressive gradient on hover */}
-                    <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gradient-to-br ${product.color}`} />
+                  <div className="relative bg-[#fcb345] w-full h-full" key={product.id}>
+                    <a
+                      href={product.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onMouseEnter={() => setHoveredLink(product.id)}
+                      onMouseLeave={() => setHoveredLink(null)}
+                      className="group block w-full h-full relative overflow-hidden rounded-none border-2 border-black bg-white p-4 sm:p-6 lg:p-7 transition-all duration-150 hover:-translate-x-1.5 hover:-translate-y-1.5 hover:scale-95 hover:bg-black hover:text-white cursor-pointer active:scale-85 hover:-skew-x-2 hover:skew-y-1"
+                      style={{
+                        transform: hoveredLink === product.id ? 'perspective(1000px) rotateX(2deg) rotateZ(-1deg)' : 'none',
+                      }}
+                    >
+                      {/* Aggressive gradient on hover */}
+                      <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gradient-to-br ${product.color}`} />
 
-                    {/* Content */}
-                    <div className=" relative z-10 flex flex-col h-full">
-                      <div className="flex items-center gap-3 mb-4 sm:mb-5">
-                        <Icon className="w-6 sm:w-7 h-6 sm:h-7 flex-shrink-0 text-black group-hover:text-white transition-colors duration-150" />
-                        <h3 className="text-lg sm:text-xl lg:text-2xl font-black" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
-                          {product.title}
-                        </h3>
+                      {/* Content */}
+                      <div className=" relative z-10 flex flex-col h-full">
+                        <div className="flex items-center gap-3 mb-4 sm:mb-5">
+                          <Icon className="w-6 sm:w-7 h-6 sm:h-7 flex-shrink-0 text-black group-hover:text-white transition-colors duration-150" />
+                          <h3 className="text-lg sm:text-xl lg:text-2xl font-black" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+                            {product.title}
+                          </h3>
+                        </div>
+                        <p className="text-xs sm:text-sm text-black/60 group-hover:text-white/80 transition-colors duration-150 mb-4">
+                          {product.description}
+                        </p>
+                        <div className="flex items-center gap-2 mt-auto text-xs font-medium text-black/50 group-hover:text-white/70 transition-colors duration-150">
+                          <span>Visit</span>
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </div>
                       </div>
-                      <p className="text-xs sm:text-sm text-black/60 group-hover:text-white/80 transition-colors duration-150 mb-4">
-                        {product.description}
-                      </p>
-                      <div className="flex items-center gap-2 mt-auto text-xs font-medium text-black/50 group-hover:text-white/70 transition-colors duration-150">
-                        <span>Visit</span>
-                        <ExternalLink className="w-3.5 h-3.5" />
-                      </div>
-                    </div>
-                  </a>
+                    </a>
+                  </div>
                 )
               })}
             </div>
