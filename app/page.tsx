@@ -113,7 +113,7 @@ export default function Home() {
           </div>
 
           {/* Products Section - Frosted Glass */}
-          <div className="mb-12 sm:mb-20 p-6 sm:p-8 lg:p-10 rounded-none bg-neutral-100/20 backdrop-blur-[2px]">
+          <div className="mb-12 sm:mb-20 p-6 sm:p-8 lg:p-10 rounded-none bg-neutral-100/20 backdrop-blur-[2px] shadow-sm shadow-gray-800/10">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-black mb-6 sm:mb-8" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
               My Products
             </h2>
@@ -160,7 +160,7 @@ export default function Home() {
           </div>
 
           {/* Connect with Me Section - Frosted Glass */}
-          <div className="mb-12 sm:mb-20 p-6 sm:p-8 lg:p-10 rounded-none bg-neutral-100/20 backdrop-blur-[2px]">
+          <div className="mb-12 sm:mb-20 p-6 sm:p-8 lg:p-10 rounded-none bg-neutral-100/20 backdrop-blur-[2px] shadow-sm shadow-gray-800/10">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-black mb-6 sm:mb-8" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
               Me
             </h2>
@@ -202,7 +202,7 @@ export default function Home() {
           </div>
 
           {/* About Section - Frosted Glass */}
-          <div className="p-6 sm:p-8 lg:p-10 rounded-none mb-12 sm:mb-20 bg-neutral-100/20 backdrop-blur-[2px]">
+          <div className="p-6 sm:p-8 lg:p-10 rounded-none mb-12 sm:mb-20 bg-neutral-100/20 backdrop-blur-[2px] shadow-sm shadow-gray-800/10">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-black mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
               About Me
             </h2>
