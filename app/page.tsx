@@ -31,6 +31,14 @@ export default function Home() {
       href: 'https://parhle.mueed.xyz',
       color: 'from-gray-900 to-black',
     },
+    {
+      id: 'brenks',
+      title: 'Brenks',
+      description: 'Advanced AI-assisted workflow orchestration and dynamic dashboard generation platform',
+      icon: Zap,
+      href: '#',
+      color: 'from-stone-900 to-black',
+    },
   ]
 
   const links = [
