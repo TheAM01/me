@@ -36,7 +36,7 @@ export default function Home() {
       title: 'Brenks',
       description: 'Advanced AI-assisted workflow orchestration and dynamic dashboard generation platform',
       icon: Zap,
-      href: '#',
+      href: 'https://brenks.mueed.xyz',
       color: 'from-stone-900 to-black',
     },
   ]
