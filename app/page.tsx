@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Github, Linkedin, Music, Mail, ExternalLink, Code2, Zap } from 'lucide-react'
+import { Github, Linkedin, Music, Mail, ExternalLink, Code2, Zap, Briefcase } from 'lucide-react'
 
 export default function Home() {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null)
@@ -22,6 +22,14 @@ export default function Home() {
       icon: Zap,
       href: 'https://classman.mueed.xyz',
       color: 'from-zinc-900 to-black',
+    },
+    {
+      id: 'vance',
+      title: 'Vance',
+      description: 'Project & task management platform for freelancers',
+      icon: Briefcase,
+      href: 'https://vance.mueed.xyz',
+      color: 'from-neutral-900 to-black',
     },
     {
       id: 'parhle',
