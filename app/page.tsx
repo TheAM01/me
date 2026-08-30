@@ -49,6 +49,37 @@ export default function Home() {
     },
   ]
 
+  const companies = [
+    {
+      id: 'boost-lifestyle',
+      name: 'Boost Lifestyle',
+      domain: 'boost-lifestyle.co',
+      href: 'https://boost-lifestyle.co',
+      color: 'from-orange-600 to-black',
+    },
+    {
+      id: 'digitemb',
+      name: 'Digitemb',
+      domain: 'digitemb.com',
+      href: 'https://digitemb.com',
+      color: 'from-blue-700 to-black',
+    },
+    {
+      id: 'tahseenislam',
+      name: 'Tahseen Islam',
+      domain: 'tahseenislam.com',
+      href: 'https://tahseenislam.com',
+      color: 'from-emerald-700 to-black',
+    },
+    {
+      id: 'lawshaoor',
+      name: 'LawShaoor',
+      domain: 'lawshaoor.com',
+      href: 'https://lawshaoor.com',
+      color: 'from-red-700 to-black',
+    },
+  ]
+
   const links = [
     {
       id: 'linkedin',
@@ -123,7 +154,7 @@ export default function Home() {
                 </h1>
               </div>
               <p className="text-sm sm:text-lg lg:text-xl text-black font-black uppercase tracking-widest pl-1" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
-                Student Software Engineer
+                Student, Software Engineer
               </p>
             </div>
           </div>
@@ -172,6 +203,52 @@ export default function Home() {
                   </div>
                 )
               })}
+            </div>
+          </div>
+
+          {/* Companies I've Worked With Section - Frosted Glass */}
+          <div className="mb-12 sm:mb-20 p-6 sm:p-8 lg:p-10 rounded-none bg-neutral-100/20 backdrop-blur-[2px] shadow-sm shadow-gray-800/10">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-black mb-6 sm:mb-8" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+              Companies I've Worked With
+            </h2>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+              {companies.map((company) => (
+                <a
+                  key={company.id}
+                  href={company.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={() => setHoveredLink(company.id)}
+                  onMouseLeave={() => setHoveredLink(null)}
+                  className="group relative overflow-hidden rounded-none border-2 border-black bg-white p-4 sm:p-5 lg:p-6 transition-all duration-150 hover:-translate-x-1.5 hover:-translate-y-1.5 hover:scale-95 hover:bg-black hover:text-white cursor-pointer active:scale-85 hover:-skew-x-2 hover:skew-y-1"
+                  style={{
+                    transform: hoveredLink === company.id ? 'perspective(1000px) rotateX(2deg) rotateZ(-1deg)' : 'none',
+                  }}
+                >
+                  {/* Sharp gradient background on hover */}
+                  <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gradient-to-br ${company.color}`} />
+
+                  {/* Content */}
+                  <div className="relative z-10 flex flex-col items-start gap-2.5 sm:gap-3">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 border-2 border-black bg-white flex items-center justify-center overflow-hidden">
+                      <img
+                        src={`https://www.google.com/s2/favicons?domain=${company.domain}&sz=128`}
+                        alt={`${company.name} logo`}
+                        className="w-6 h-6 sm:w-7 sm:h-7 object-contain"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-sm sm:text-base lg:text-lg font-black leading-tight" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+                        {company.name}
+                      </h3>
+                      <p className="text-[11px] sm:text-xs text-black/50 group-hover:text-white/70 transition-colors duration-150 mt-0.5">
+                        {company.domain}
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
 
@@ -227,7 +304,7 @@ export default function Home() {
                 I'm Abdul Mueed, a Software Architect and Full Stack Engineer with nearly a decade of experience building scalable systems and polished digital products. I operate at the intersection of design, code, and architecture — where most people choose one, I've mastered the overlap.
               </p>
               <p className="text-sm sm:text-base lg:text-lg text-black/70 leading-relaxed">
-                I build and ship enterprise-grade applications end to end, from system architecture to product delivery, and handle the DevOps and infrastructure that keeps multiple enterprise apps running behind the scenes. I've led cross-functional teams and made the technical calls that balance speed, scalability, and user experience. Alongside that, I'm building AI-powered SaaS products tackling problems across education, e-commerce, and other domains.
+                I build and ship enterprise-grade applications end to end, from system architecture to product delivery, and handle the DevOps and infrastructure that keeps multiple enterprise apps running behind the scenes. I've led cross-functional teams and made the technical calls that balance speed, scalability, and user experience. Alongside that, I'm building SaaS products tackling problems across education, e-commerce, and other domains.
               </p>
               <p className="text-sm sm:text-base lg:text-lg text-black/70 leading-relaxed">
                 When I'm not building, I teach — taking absolute beginners through the full journey of becoming job-ready full-stack developers.
