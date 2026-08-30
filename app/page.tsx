@@ -123,7 +123,7 @@ export default function Home() {
                 </h1>
               </div>
               <p className="text-sm sm:text-lg lg:text-xl text-black font-black uppercase tracking-widest pl-1" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
-                Co-founder @ ExtensorLabs — Software Engineer
+                Student Software Engineer
               </p>
             </div>
           </div>
@@ -224,10 +224,10 @@ export default function Home() {
             </h2>
             <div className="space-y-4 sm:space-y-6">
               <p className="text-sm sm:text-base lg:text-lg text-black/70 leading-relaxed">
-                I'm Abdul Mueed, a Software Architect, Frontend Engineer, and Co-Founder with nearly a decade of experience building scalable systems and polished digital products. I operate at the intersection of design, code, and architecture — where most people choose one, I've mastered the overlap.
+                I'm Abdul Mueed, a Software Architect and Full Stack Engineer with nearly a decade of experience building scalable systems and polished digital products. I operate at the intersection of design, code, and architecture — where most people choose one, I've mastered the overlap.
               </p>
               <p className="text-sm sm:text-base lg:text-lg text-black/70 leading-relaxed">
-                As CTO of ExtensorLabs, I lead the engineering behind an AI-powered SaaS platform, driving everything from system architecture to product delivery. I've built and led cross-functional teams, making technical decisions that balance speed, scalability, and user experience.
+                I build and ship enterprise-grade applications end to end, from system architecture to product delivery, and handle the DevOps and infrastructure that keeps multiple enterprise apps running behind the scenes. I've led cross-functional teams and made the technical calls that balance speed, scalability, and user experience. Alongside that, I'm building AI-powered SaaS products tackling problems across education, e-commerce, and other domains.
               </p>
               <p className="text-sm sm:text-base lg:text-lg text-black/70 leading-relaxed">
                 When I'm not building, I teach — taking absolute beginners through the full journey of becoming job-ready full-stack developers.
