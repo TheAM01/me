@@ -1,7 +1,9 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Github, Linkedin, Music, Mail, ExternalLink, Code2, Zap, Briefcase } from 'lucide-react'
+import { Github, Linkedin, Music, Mail, ExternalLink, Code2, Zap, Briefcase, MessageCircle, Send, LayoutGrid, ArrowRight } from 'lucide-react'
+
+const PORTFOLIO = 'https://portfolio.mueed.xyz'
 
 export default function Home() {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null)
@@ -47,6 +49,22 @@ export default function Home() {
       href: 'https://brenks.mueed.xyz',
       color: 'from-stone-900 to-black',
     },
+    {
+      id: 'krispin',
+      title: 'Krispin',
+      description: 'AI WhatsApp agent that handles customer support & campaigns for online stores',
+      icon: MessageCircle,
+      href: 'https://krispin.mueed.xyz',
+      color: 'from-emerald-950 to-black',
+    },
+    {
+      id: 'krest',
+      title: 'Krest',
+      description: 'AI email & messaging platform for embroidery digitizing studios',
+      icon: Send,
+      href: 'https://krest.mueed.xyz',
+      color: 'from-slate-800 to-black',
+    },
   ]
 
   const companies = [
@@ -81,6 +99,14 @@ export default function Home() {
   ]
 
   const links = [
+    {
+      id: 'portfolio',
+      title: 'Portfolio',
+      description: 'Everything I have built, in detail',
+      icon: LayoutGrid,
+      href: PORTFOLIO,
+      color: 'from-[#fcb345] to-black',
+    },
     {
       id: 'linkedin',
       title: 'LinkedIn',
@@ -157,6 +183,16 @@ export default function Home() {
                 Student, Software Engineer
               </p>
             </div>
+            <a
+              href={PORTFOLIO}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group/btn inline-flex items-center gap-2 border-2 border-black bg-[#fcb345] px-5 py-3 text-xs sm:text-sm font-black uppercase tracking-widest text-black shadow-[4px_4px_0_0_#000] hover:shadow-[1px_1px_0_0_#000] hover:translate-x-[3px] hover:translate-y-[3px] hover:bg-black hover:text-white active:scale-95 transition-all duration-150"
+              style={{ fontFamily: 'var(--font-space-grotesk)' }}
+            >
+              View my portfolio
+              <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+            </a>
           </div>
 
           {/* Products Section - Frosted Glass */}
@@ -169,10 +205,7 @@ export default function Home() {
                 const Icon = product.icon
                 return (
                   <div className="relative bg-[#fcb345] w-full h-full" key={product.id}>
-                    <a
-                      href={product.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <div
                       onMouseEnter={() => setHoveredLink(product.id)}
                       onMouseLeave={() => setHoveredLink(null)}
                       className="group block w-full h-full relative overflow-hidden rounded-none border-2 border-black bg-white p-4 sm:p-6 lg:p-7 transition-all duration-150 hover:-translate-x-1.5 hover:-translate-y-1.5 hover:scale-95 hover:bg-black hover:text-white cursor-pointer active:scale-85 hover:-skew-x-2 hover:skew-y-1"
@@ -180,11 +213,14 @@ export default function Home() {
                         transform: hoveredLink === product.id ? 'perspective(1000px) rotateX(2deg) rotateZ(-1deg)' : 'none',
                       }}
                     >
+                      {/* Whole card opens the live product */}
+                      <a href={product.href} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-[5]" aria-label={`Visit ${product.title}`} />
+
                       {/* Aggressive gradient on hover */}
                       <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gradient-to-br ${product.color}`} />
 
                       {/* Content */}
-                      <div className=" relative z-10 flex flex-col h-full">
+                      <div className="relative z-10 flex flex-col h-full pointer-events-none">
                         <div className="flex items-center gap-3 mb-4 sm:mb-5">
                           <Icon className="w-6 sm:w-7 h-6 sm:h-7 flex-shrink-0 text-black group-hover:text-white transition-colors duration-150" />
                           <h3 className="text-lg sm:text-xl lg:text-2xl font-black" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
@@ -194,12 +230,24 @@ export default function Home() {
                         <p className="text-xs sm:text-sm text-black/60 group-hover:text-white/80 transition-colors duration-150 mb-4">
                           {product.description}
                         </p>
-                        <div className="flex items-center gap-2 mt-auto text-xs font-medium text-black/50 group-hover:text-white/70 transition-colors duration-150">
-                          <span>Visit</span>
-                          <ExternalLink className="w-3.5 h-3.5" />
+                        <div className="flex items-center justify-between gap-2 mt-auto text-xs font-medium text-black/50 group-hover:text-white/70 transition-colors duration-150">
+                          <span className="flex items-center gap-2">
+                            <span>Visit</span>
+                            <ExternalLink className="w-3.5 h-3.5" />
+                          </span>
+                          <a
+                            href={`${PORTFOLIO}/project/${product.id}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="pointer-events-auto flex items-center gap-1.5 border-2 border-current px-2 py-1 font-black uppercase tracking-wider text-[10px] sm:text-[11px] text-black group-hover:text-white hover:!bg-[#fcb345] hover:!text-black hover:!border-black transition-colors duration-150"
+                            style={{ fontFamily: 'var(--font-space-grotesk)' }}
+                          >
+                            Details
+                            <ArrowRight className="w-3 h-3" />
+                          </a>
                         </div>
                       </div>
-                    </a>
+                    </div>
                   </div>
                 )
               })}
