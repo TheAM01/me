@@ -176,7 +176,7 @@ export default function Home() {
               <div className="relative inline-block group">
                 <div className="absolute -inset-2 bg-black skew-x-9 group-hover:skew-x-4 transition-transform duration-300" />
                 <h1 className="relative z-10 text-5xl sm:text-7xl lg:text-9xl font-black tracking-tighter leading-none text-white px-4 sm:px-6 py-2" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
-                  MUEED
+                  <span className="sr-only">Abdul </span>MUEED
                 </h1>
               </div>
               <p className="text-sm sm:text-lg lg:text-xl text-black font-black uppercase tracking-widest pl-1" style={{ fontFamily: 'var(--font-space-grotesk)' }}>

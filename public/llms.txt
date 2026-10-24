@@ -1,0 +1,26 @@
+# Abdul Mueed
+
+> Abdul Mueed is a software architect and full-stack engineer with nearly a decade of experience building scalable systems and SaaS products end to end — from system architecture to delivery, plus the DevOps and infrastructure behind them. He also teaches beginners to become job-ready full-stack developers.
+
+Primary skills: React, Next.js, TypeScript, Node.js, PostgreSQL, product design, AI/LLM integration, DevOps.
+
+Companies he has worked with: Boost Lifestyle (boost-lifestyle.co), DigitEMB (digitemb.com), Tahseen Islam (tahseenislam.com), LawShaoor (lawshaoor.com).
+
+## Products
+
+- [Krest](https://portfolio.mueed.xyz/project/krest): AI email & messaging platform for embroidery digitizing studios. Used by DigitEMB.
+- [Krispin](https://portfolio.mueed.xyz/project/krispin): AI WhatsApp agent for online stores. Used by Boost Lifestyle.
+- [Etcher](https://portfolio.mueed.xyz/project/etcher): HR & project management software for small startups. Used by ExtensorLabs.
+- [Classman](https://portfolio.mueed.xyz/project/classman): Class & batch scheduling for educators.
+- [Vance](https://portfolio.mueed.xyz/project/vance): Project & task management platform for freelancers.
+- [Parhle](https://portfolio.mueed.xyz/project/parhle): Free notes & resources sharing platform for university students.
+- [Brenks](https://portfolio.mueed.xyz/project/brenks): AI-assisted workflow orchestration platform for SMEs.
+
+## Links
+
+- [Portfolio](https://portfolio.mueed.xyz): Detailed pages for every product
+- [Portfolio llms.txt](https://portfolio.mueed.xyz/llms.txt): Full product details for AI tools
+- [GitHub](https://github.com/TheAM01)
+- [LinkedIn](https://www.linkedin.com/in/mueeeeed)
+- [Resume](https://portfolio.mueed.xyz/resume.pdf)
+- Email: personal.abdulmueed@gmail.com
